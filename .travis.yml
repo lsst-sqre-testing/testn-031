@@ -2,7 +2,7 @@ sudo: false
 language: python
 matrix:
   include:
-    - python: "3.5"
+    - python: '3.5'
       env: LTD_MASON_BUILD=true
 install:
   - pip install -r requirements.txt
@@ -15,5 +15,6 @@ env:
   global:
     - LTD_MASON_BUILD=false  # disable builds in regular text matrix
     - LTD_MASON_PRODUCT="testn-031"
+    - secret: mysecret
     # Add AWS and LTD Keeper credentials as encrypted secrets here
 
